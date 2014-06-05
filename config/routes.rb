@@ -1,7 +1,15 @@
 MokaApp::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/board"
-  get "static_pages/MyPage"
+  get "users/new"
+  
+  root  'static_pages#home'
+  match '/signup',   to: 'users#new',             via: 'get'
+  match '/board',    to: 'static_pages#board',    via: 'get'
+  match '/mypage',   to: 'static_pages#MyPage',   via: 'get'
+
+  
+  #get "static_pages/home"
+  #get "static_pages/board"
+  #get "static_pages/MyPage"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
