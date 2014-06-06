@@ -71,7 +71,7 @@ describe User do
   		before do
   			user_with_same_userid = @user.dup
   			user_with_same_userid.userid = @user.userid.upcase
-      		user_with_same_userid.save
+      	user_with_same_userid.save
     	end
 
     	it { should_not be_valid }
