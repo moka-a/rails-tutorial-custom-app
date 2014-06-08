@@ -7,6 +7,9 @@ MokaApp::Application.routes.draw do
   match '/signin',   to: 'sessions#new',          via: 'get'
   match '/signout',  to: 'sessions#destroy',      via: 'delete'
   match '/board',    to: 'static_pages#board',    via: 'get'
+
+  match '/DoWriteBoard', to: 'static_pages#DoWriteBoard', via: 'get'
+  match '/show_write_form', to: 'static_pages#show_write_form', via: 'get'
   match '/mypage',   to: 'static_pages#MyPage',   via: 'get'
 
   
