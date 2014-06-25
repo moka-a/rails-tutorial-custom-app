@@ -5,6 +5,7 @@ class CreateBoardrows < ActiveRecord::Migration
       t.string :name
       t.string :memo
       t.integer :hits
+      t.string :user_id
 
       t.timestamps
     end

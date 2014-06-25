@@ -9,28 +9,20 @@
 	    	<br>
 	    	<div>
 		    	<ul class="nav nav-list">
-		    		<li class="active"><span><i class="icon-home"></i><%= link_to "Time line", mypage_path %></span></li>
+		    		<li><span><i class="icon-home"></i><%= link_to "Time line", mypage_path %></span></li>
 		    		<li><span><i class="icon-camera"></i><%= link_to "I am", mypage_iam_path %></span></li>
 		    		<li><span><i class="icon-camera"></i><%= link_to "We are", mypage_weare_path %></span></li>
-		    		<li><span><i class="icon-camera"></i><%= link_to "memory", mypage_memory_path %></span></li>
+		    		<li class="active"><span><i class="icon-camera"></i><%= link_to "memory", mypage_memory_path %></span></li>
 		    		<li><span><i class="icon-camera"></i><%= link_to "..", "#" %></span></li>
-
-
-
-
-		    		
 		    	</ul>
 	    	</div>
 	   	</aside>
 		
 
 		<div class="span8">
-	    <%= render 'shared/micropost_form' %>
-	  		<div class="span8">
-       			<ol class="microposts">
-      	 		<%= render 'shared/feed' %>
-       			</ol>
-      		</div>
+			<h3>This is Memory ..</h3>
+	    
+
 		</div>
 
 

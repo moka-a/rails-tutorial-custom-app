@@ -1,5 +1,22 @@
 <% provide(:title, 'Home') %>
 
+<% if signed_in? %>
+<div class="center hero-unit">
+<p>Here is memorable - </p>
+<h2>Welcome to the Photobook</h2>
+<h2>__________________________</h2>
+<h2>loooooooooooooooooooooooooool</h2>
+<h2>loooooooooooooooooooooooooool</h2>
+<h2>loooooooooooooooooooooooooool</h2>
+<h2>loooooooooooooooooooooooooool</h2>
+<h2>-------------------------------------------------</h2>
+<small>Today's best photo !</small>
+<br>
+<img alt="Rails", src="/assets/logo_717597_web.jpg" /><br>
+</div>
+
+<% else %>
+
 <div class="center hero-unit">
 <p>Here is memorable - </p>
 <h2>Welcome to the Photobook</h2>
@@ -14,6 +31,6 @@
 <img alt="Rails", src="/assets/logo_717597_web.jpg" /><br>
 <%= link_to "Sign up now !", signup_path, class: "btn btn-success" %>
 </div>
-
+<% end %>
 
 

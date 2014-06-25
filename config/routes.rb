@@ -1,16 +1,26 @@
 MokaApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
   
   root  'static_pages#home'
   match '/signup',   to: 'users#new',             via: 'get'
   match '/signin',   to: 'sessions#new',          via: 'get'
   match '/signout',  to: 'sessions#destroy',      via: 'delete'
   match '/board',    to: 'static_pages#board',    via: 'get'
+  match '/board/bd1',    to: 'static_pages#bd1',    via: 'get'
+  match '/board/bd2',    to: 'static_pages#bd2',    via: 'get'
+  match '/board/bd3',    to: 'static_pages#bd3',    via: 'get'
+  match '/board/bd4',    to: 'static_pages#bd4',    via: 'get'
+  match '/board/bd5',    to: 'static_pages#bd5',    via: 'get'
+  match '/board/bd6',    to: 'static_pages#bd6',    via: 'get'
 
-  match '/DoWriteBoard', to: 'static_pages#DoWriteBoard', via: 'get'
+  match '/DoWriteBoard', to: 'static_pages#DoWriteBoard', via: 'post'
   match '/show_write_form', to: 'static_pages#show_write_form', via: 'get'
   match '/mypage',   to: 'static_pages#MyPage',   via: 'get'
+  match '/mypage/iam',   to: 'static_pages#iam',   via: 'get'
+  match '/mypage/weare',   to: 'static_pages#weare',   via: 'get'
+  match '/mypage/memory',   to: 'static_pages#memory',   via: 'get'
 
   
   #get "static_pages/home"
