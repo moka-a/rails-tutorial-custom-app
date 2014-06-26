@@ -5,6 +5,9 @@ MokaApp::Application.routes.draw do
   resources :paintings
   resources :freeboards
   resources :sellbuyboards
+  resources :letsboards
+  resources :shellboards
+  resources :infoboards
   
   root  'static_pages#home'
 
@@ -21,6 +24,15 @@ MokaApp::Application.routes.draw do
 
   match '/board/sellbuyboard',    to: 'sellbuyboards#index',    via: 'get'
   match '/board/sellbuyboard/write',    to: 'sellbuyboards#new',    via: 'get'
+
+  match '/board/letsboard',    to: 'letsboards#index',    via: 'get'
+  match '/board/letsboard/write',    to: 'letsboards#new',    via: 'get'
+
+  match '/board/shellboard',    to: 'shellboards#index',    via: 'get'
+  match '/board/shellboard/write',    to: 'shellboards#new',    via: 'get'
+
+  match '/board/infoboard',    to: 'infoboards#index',    via: 'get'
+  match '/board/infoboard/write',    to: 'infoboards#new',    via: 'get'
   # match '/board/bd4',    to: 'static_pages#bd4',    via: 'get'
   # match '/board/bd5',    to: 'static_pages#bd5',    via: 'get'
   # match '/board/bd6',    to: 'static_pages#bd6',    via: 'get'

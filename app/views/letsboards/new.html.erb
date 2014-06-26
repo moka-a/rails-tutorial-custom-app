@@ -1,0 +1,10 @@
+<% provide(:title, 'Board') %>
+<h1>write form</h1>
+
+<%= form_for @board do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	subject : <%= f.text_field :subject %>
+	momo : <%= f.text_area :memo %>
+
+	<%= f.submit "Post" %>
+<% end %>

@@ -8,9 +8,9 @@
                 <li class="nav-header">-Board-</li>
                 <li><%= link_to "free -", board_freeboard_path %></li>
                 <li><%= link_to "sell & buy", board_sellbuyboard_path %></li>
-                <li><a href="#">let's together</a></li>
-                <li><a href="#">shell knowhow</a></li>
-                <li><a href="#">info-camera</a></li>
+                <li><%= link_to "let's together", board_letsboard_path %></li>
+                <li><%= link_to "shell knowhow", board_shellboard_path %></li>
+                <li><%= link_to "info-camera", board_infoboard_path %></li>
             </ul>
         </div>
        </aside>
@@ -18,6 +18,7 @@
 
     <div class="span10">
         <br>
+        <h1> This is Sell & Buy board ! </h1>
         <%= render 'shared/sellbuyboardlist' %>
         <%= link_to "Write", board_sellbuyboard_write_path, class: "btn btn-success" %>
         <%#= will_paginate @boards %>

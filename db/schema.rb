@@ -11,9 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626191205) do
+ActiveRecord::Schema.define(version: 20140626210420) do
 
   create_table "freeboards", force: true do |t|
+    t.string   "subject"
+    t.string   "memo"
+    t.integer  "hits"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "infoboards", force: true do |t|
+    t.string   "subject"
+    t.string   "memo"
+    t.integer  "hits"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "letsboards", force: true do |t|
     t.string   "subject"
     t.string   "memo"
     t.integer  "hits"
@@ -42,6 +60,16 @@ ActiveRecord::Schema.define(version: 20140626191205) do
     t.string   "subject"
     t.string   "memo"
     t.integer  "hits"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shellboards", force: true do |t|
+    t.string   "subject"
+    t.string   "memo"
+    t.integer  "hits"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

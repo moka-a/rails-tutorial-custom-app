@@ -4,7 +4,7 @@ class FreeboardsController < ApplicationController
 
 	def index
 		@boards = Freeboard.all
-		@board = current_user.freeboards.build()
+		# @board = current_user.freeboards.build()
 		# @boards = @user.freeboards.paginate(page: params[:page])
 	end
 

@@ -1,6 +1,6 @@
-class CreateSellbuyboards < ActiveRecord::Migration
+class CreateShellboards < ActiveRecord::Migration
   def change
-    create_table :sellbuyboards do |t|
+    create_table :shellboards do |t|
       t.string :subject
       t.string :memo
       t.integer :hits

@@ -1,0 +1,2 @@
+module LetsboardsHelper
+end

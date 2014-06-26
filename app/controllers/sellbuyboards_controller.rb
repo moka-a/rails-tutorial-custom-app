@@ -22,14 +22,13 @@ class SellbuyboardsController < ApplicationController
 	end
 
 	def create
-		@board = current_user.sellbuyboards.build(freeboard_params)
+		@board = current_user.sellbuyboards.build(sellbuyboard_params)
 		@board.save
-		redirect_to board_freeboard_path
-
+		redirect_to board_sellbuyboard_path
 	end
 
 	private
-		def freeboard_params
+		def sellbuyboard_params
 			params.require(:sellbuyboard).permit(:subject, :memo)
 		end
 end
