@@ -2,16 +2,25 @@ MokaApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
-  # resources :paintings
+  resources :paintings
+  resources :freeboards
+  resources :sellbuyboards
   
   root  'static_pages#home'
+
+  match '/paintings', to: 'static_pages#iam', via: 'get'
+  
   match '/signup',   to: 'users#new',             via: 'get'
   match '/signin',   to: 'sessions#new',          via: 'get'
   match '/signout',  to: 'sessions#destroy',      via: 'delete'
   match '/board',    to: 'static_pages#board',    via: 'get'
-  # match '/board/bd1',    to: 'static_pages#bd1',    via: 'get'
-  # match '/board/bd2',    to: 'static_pages#bd2',    via: 'get'
-  # match '/board/bd3',    to: 'static_pages#bd3',    via: 'get'
+  
+  match '/board/freeboard',    to: 'freeboards#index',    via: 'get'
+  match '/board/freeboard/write',    to: 'freeboards#new',    via: 'get'
+  # match '/board/freeboard/show',    to: 'freeboards#show',    via: 'get'
+
+  match '/board/sellbuyboard',    to: 'sellbuyboards#index',    via: 'get'
+  match '/board/sellbuyboard/write',    to: 'sellbuyboards#new',    via: 'get'
   # match '/board/bd4',    to: 'static_pages#bd4',    via: 'get'
   # match '/board/bd5',    to: 'static_pages#bd5',    via: 'get'
   # match '/board/bd6',    to: 'static_pages#bd6',    via: 'get'

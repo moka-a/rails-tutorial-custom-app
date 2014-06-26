@@ -1,10 +1,13 @@
 class User < ActiveRecord::Base
   has_many :microposts, dependent: :destroy
-  # has_many :Boardrows
-  attr_accessible :name
+  # attr_accessible :name
   has_many :paintings
 
   has_many :freeboards
+  has_many :sellbuyboards
+  has_many :letsboards
+  has_many :shellboards
+  has_many :infoboards
   
 
 

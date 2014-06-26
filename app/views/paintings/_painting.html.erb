@@ -1,0 +1,12 @@
+<%= render 'shared/uploadform' %>
+	
+	<div id="paintings">
+		<%#= @painting do |painting| %>
+
+		<%#= image_tag @image.image_url.to_s %>
+		
+		<%= image_tag painting.image_url(:thumb) if painting.image? %>
+		<%#end%>
+		
+			<div class="clear"></div>
+	</div>	

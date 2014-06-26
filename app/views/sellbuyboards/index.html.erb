@@ -1,0 +1,29 @@
+<% provide(:title, 'board') %>
+
+<div class="row">
+      <aside class="span2">
+        <br>
+        <div>
+            <ul class="nav nav-list">
+                <li class="nav-header">-Board-</li>
+                <li><%= link_to "free -", board_freeboard_path %></li>
+                <li><%= link_to "sell & buy", board_sellbuyboard_path %></li>
+                <li><a href="#">let's together</a></li>
+                <li><a href="#">shell knowhow</a></li>
+                <li><a href="#">info-camera</a></li>
+            </ul>
+        </div>
+       </aside>
+       
+
+    <div class="span10">
+        <br>
+        <%= render 'shared/sellbuyboardlist' %>
+        <%= link_to "Write", board_sellbuyboard_write_path, class: "btn btn-success" %>
+        <%#= will_paginate @boards %>
+    </div>
+
+
+
+
+</div>

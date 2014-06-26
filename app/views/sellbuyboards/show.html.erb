@@ -1,0 +1,21 @@
+<% provide(:title, @board.id) %>
+
+<table class="table">
+	<tr>
+		<th>Subject</th>
+		<th>User ID</th>
+		<th>Date</th>
+	</tr>
+	<tr>
+		<td><%= @board.subject %></td>
+		<td><%= @board.user.userid %></td>
+		<td><%= @board.updated_at %></td>
+	</tr>
+	<tr>
+		<th>Content - </th>
+	</tr>
+</table>
+	<div class="container">
+	<%= @board.memo %>
+	</div>
+

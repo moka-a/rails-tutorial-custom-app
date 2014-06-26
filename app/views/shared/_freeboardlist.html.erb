@@ -1,0 +1,23 @@
+<table class="table">
+    <tr class="success">
+        <th>#</th>
+        <th>Subject</th>
+        <th>id</th>
+        <th>date</th>
+        <th>hits</th>
+    </tr>
+
+    <% @boards.each do |obj| %>
+
+    <tr>
+        <td><%= obj.id %></td>
+        <td><a href="../freeboards/<%= obj.id %>"><%= obj.subject %></td>
+        <td><%= obj.user.userid %></td>
+        <td><%= obj.updated_at %></td>
+        <td><%= obj.hits %></td>
+    </tr>
+
+    <% end %>
+</table>
+
+

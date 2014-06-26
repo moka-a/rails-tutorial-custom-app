@@ -8,6 +8,5 @@ class CreateFreeboards < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :freeboards, [:user_id, :created_at]
   end
 end
