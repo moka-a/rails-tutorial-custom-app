@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
-  def rowspage
-  	@rowspage ||= 2
+  def rowsPerPage
+  	@rowsPerPage ||= 2
   end
   
 end

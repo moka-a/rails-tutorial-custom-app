@@ -59,10 +59,13 @@ class StaticPagesController < ApplicationController
         end
         # @user = User.find(params[:id])
         # @microposts = @user.microposts.paginate(page: params[:page])
-        
 	end
 
     def iam
+    end
+
+    def board
+        
     end
 
 

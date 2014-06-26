@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
   has_many :microposts, dependent: :destroy
   # has_many :Boardrows
-  # has_many :paintings
+  attr_accessible :name
+  has_many :paintings
 
-  # attr_accessible :name
+  has_many :freeboards
+  
 
 
 	before_save { self.userid = userid.downcase }
