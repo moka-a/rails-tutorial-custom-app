@@ -2,7 +2,7 @@ MokaApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
-  resources :paintings
+  # resources :paintings
   
   root  'static_pages#home'
   match '/signup',   to: 'users#new',             via: 'get'
@@ -16,8 +16,8 @@ MokaApp::Application.routes.draw do
   # match '/board/bd5',    to: 'static_pages#bd5',    via: 'get'
   # match '/board/bd6',    to: 'static_pages#bd6',    via: 'get'
 
-  match '/DoWriteBoard', to: 'static_pages#DoWriteBoard', via: 'post'
-  match '/show_write_form', to: 'static_pages#show_write_form', via: 'get'
+  # match '/DoWriteBoard', to: 'static_pages#DoWriteBoard', via: 'post'
+  # match '/show_write_form', to: 'static_pages#show_write_form', via: 'get'
   match '/mypage',   to: 'static_pages#MyPage',   via: 'get'
   match '/mypage/iam',   to: 'static_pages#iam',   via: 'get'
   match '/mypage/weare',   to: 'static_pages#weare',   via: 'get'
