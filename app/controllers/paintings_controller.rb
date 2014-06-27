@@ -2,11 +2,15 @@ class PaintingsController < ApplicationController
 	before_action :signed_in_user, only: [:create]
 
 	def index
-		# @painting = current_user.paintings.build(painting_params)
+		@painting = current_user.paintings.build()
 	end
 
-	def show
-		@painting = Painting.find(params[:id])
+	# def show
+	# 	@painting = Painting.find(params[:id])
+	# end
+
+	def new
+		@painting = Painting.new
 	end
 
 	def create

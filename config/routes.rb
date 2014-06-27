@@ -11,7 +11,9 @@ MokaApp::Application.routes.draw do
   
   root  'static_pages#home'
 
-  match '/paintings', to: 'static_pages#iam', via: 'get'
+  match '/mypage/iam', to: 'paintings#index', via: 'get'
+  match '/mypage/iam', to: 'paintings#new', via: 'get'
+  # match '/paintings', to: 'static_pages#iam', via: 'get'
   
   match '/signup',   to: 'users#new',             via: 'get'
   match '/signin',   to: 'sessions#new',          via: 'get'
@@ -40,7 +42,7 @@ MokaApp::Application.routes.draw do
   # match '/DoWriteBoard', to: 'static_pages#DoWriteBoard', via: 'post'
   # match '/show_write_form', to: 'static_pages#show_write_form', via: 'get'
   match '/mypage',   to: 'static_pages#MyPage',   via: 'get'
-  match '/mypage/iam',   to: 'static_pages#iam',   via: 'get'
+  # match '/mypage/iam',   to: 'static_pages#iam',   via: 'get'
   match '/mypage/weare',   to: 'static_pages#weare',   via: 'get'
   match '/mypage/memory',   to: 'static_pages#memory',   via: 'get'
 

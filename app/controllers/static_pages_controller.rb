@@ -34,17 +34,17 @@ class StaticPagesController < ApplicationController
 
 
     def board
-        @boards = Freeboard.all
-        # @board = current_user.freeboards.build()
+        # @boards = Freeboard.all
+        # # @board = current_user.freeboards.build()
 
-        @boards = Sellbuyboard.all
-        # @board = current_user.sellbuyboards.build()
+        # @boards = Sellbuyboard.all
+        # # @board = current_user.sellbuyboards.build()
 
-        @boards = Letsboard.all
+        # @boards = Letsboard.all
 
-        @boards = Shellboard.all
+        # @boards = Shellboard.all
 
-        @boards = Infoboard.all
+        # @boards = Infoboard.all
     end
 
 
